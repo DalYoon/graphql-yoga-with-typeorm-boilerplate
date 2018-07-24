@@ -9,11 +9,27 @@
 
 ## Usage
 
-- make project folder
+- create project
 
 ```console
 mkdir graphql-project
 cd graphql-project
-git init
-git clone https://github.com/DalYoon/graphql-yoga-with-typeorm-boilerplate
+git clone https://github.com/DalYoon/graphql-yoga-with-typeorm-boilerplate .
 ```
+
+- change `.env` for your database
+
+```
+DB_ENDPOINT=DB-Address (your database address)
+DB_NAME=DB-NAME (your database name)
+DB_USERNAME=DB-ACCOUNT (your database username)
+DB_PASSWORD=DB-PASSWORD (your database password)
+```
+
+- `yarn dev` to start the server
+
+```console
+yarn dev
+```
+
+- connect to `http://localhost:4000/playground` for playground page
