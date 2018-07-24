@@ -34,6 +34,12 @@ node_modules
 .env
 ```
 
+#### `yarn` to install dependencies
+
+```console
+yarn
+```
+
 #### `yarn dev` to start the server
 
 ```console
