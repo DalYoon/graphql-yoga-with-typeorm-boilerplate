@@ -1,0 +1,28 @@
+{
+  "name": "graphql-yoga-with-typeorm-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/cors": "^2.8.4",
+    "@types/helmet": "^0.0.38",
+    "@types/morgan": "^1.7.35",
+    "@types/node": "^10.5.2",
+    "nodemon": "^1.18.3",
+    "ts-node": "^7.0.0",
+    "tslint-config-prettier": "^1.14.0",
+    "typescript": "^2.9.2"
+  },
+  "scripts": {
+    "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql"
+  },
+  "dependencies": {
+    "cors": "^2.8.4",
+    "graphql-tools": "^3.0.5",
+    "graphql-yoga": "^1.14.12",
+    "helmet": "^3.13.0",
+    "merge-graphql-schemas": "^1.5.3",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7"
+  }
+}
