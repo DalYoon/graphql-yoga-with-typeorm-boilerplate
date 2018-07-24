@@ -43,4 +43,6 @@ yarn dev
 
 #### test `sayHello`, `sayBye` queries
 
+#### add entities those you need into `src/entities/*`
+
 #### enjoy!
