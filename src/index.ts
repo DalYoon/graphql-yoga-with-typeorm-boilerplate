@@ -1,7 +1,12 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import { Options } from "graphql-yoga";
 import app from "./app";
+import { createConnection } from "typeorm";
+import connectionOptions from "./ormConfig";
 
-const PORT: number = 4000;
+const PORT: number | string = process.env.PORT || 4000;
 const PLAYGROUND_ENDPOINT: string = "/playground";
 const GRAPHQL_ENDPOINT: string = "/graphql";
 
@@ -11,4 +16,10 @@ const appOptions: Options = {
   endpoint: GRAPHQL_ENDPOINT
 };
 
-app.start(appOptions, () => console.log(`Server is Listening on ${PORT}`));
+const handleAppStart = () => console.log(`Server is Listening on ${PORT}`);
+
+createConnection(connectionOptions)
+  .then(() => {
+    app.start(appOptions, handleAppStart);
+  })
+  .catch(err => console.log(err));
