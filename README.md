@@ -11,6 +11,6 @@
 
 - make project folder
 
-```shell
-$ mkdir graphql-project
+```console
+~$ mkdir graphql-project
 ```
