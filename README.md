@@ -6,6 +6,7 @@
   - graphql-yoga(express)
   - typescript
   - typeorm
+  - postgres
 
 ## Usage
 
