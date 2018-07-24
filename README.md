@@ -13,4 +13,7 @@
 
 ```console
 mkdir graphql-project
+cd graphql-project
+git init
+git clone https://github.com/DalYoon/graphql-yoga-with-typeorm-boilerplate
 ```
