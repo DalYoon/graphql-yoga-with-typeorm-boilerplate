@@ -8,6 +8,13 @@
   - typeorm
   - postgres
 
+## features
+
+- [x] graphql playground page
+- [x] basic typeorm settings for postgres
+- [ ] sign up
+- [ ] sign in
+
 ## Usage
 
 #### create project
