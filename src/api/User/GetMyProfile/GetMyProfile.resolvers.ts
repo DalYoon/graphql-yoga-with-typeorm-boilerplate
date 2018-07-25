@@ -7,13 +7,10 @@ const resolvers: Resolvers = {
   Query: {
     GetMyProfile: privateResolver(
       async (_, __, { req }): Promise<GetMyProfileResponse> => {
-        const user = req.user;
+        const user: User = req.user;
 
         try {
-          const profile = await User.findOne({
-            id: user.id
-          });
-
+          const profile = await User.findOne({ id: user.id });
           if (profile) {
             return {
               ok: true,
@@ -23,7 +20,7 @@ const resolvers: Resolvers = {
           } else {
             return {
               ok: false,
-              error: "Cannot find your profile",
+              error: "User Not Found",
               profile: null
             };
           }

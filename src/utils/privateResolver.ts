@@ -1,5 +1,5 @@
 const privateResolver = resolverFunction => async (parent, args, context, info) => {
-  if (!context.user) {
+  if (!context.req.user) {
     throw new Error("No JWT. I refuse to proceed");
   }
 
