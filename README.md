@@ -1,4 +1,4 @@
-# graphql-yoga-with-typeorm-boilerplate
+# graphql-yoga-with-typeorm-boilerplate v1.1
 
 ## description
 
@@ -10,10 +10,14 @@
 
 ## features
 
-- [x] graphql playground page
-- [x] basic typeorm settings for postgres
-- [ ] sign up
-- [ ] sign in
+- [x] Express Server (port 4000)
+- [x] Graphql Entry Point (/graphql)
+- [x] Graphql Playground Page (/playground)
+- [x] Typeorm Settings For Postgres
+- [x] Basic User Entity (src/entities/User.ts)
+- [x] Email Sign Up
+- [x] Email Sign In
+- [x] Get My Profile
 
 ## Usage
 
@@ -25,13 +29,14 @@ cd graphql-project
 git clone https://github.com/DalYoon/graphql-yoga-with-typeorm-boilerplate .
 ```
 
-#### change `.env` for your database
+#### change `.env` for your database and JWT Secret
 
 ```
-DB_ENDPOINT=DB-Address (your database address)
-DB_NAME=DB-NAME (your database name)
-DB_USERNAME=DB-ACCOUNT (your database username)
-DB_PASSWORD=DB-PASSWORD (your database password)
+DB_ENDPOINT=(your database address)
+DB_NAME=DB-NAME=(your database name)
+DB_USERNAME=(your database username)
+DB_PASSWORD=(your database password)
+JWT_SECRET=(your JWT secret for authentication)
 ```
 
 #### add `.env` into `.gitignore` file for secret
@@ -54,8 +59,6 @@ yarn dev
 ```
 
 #### connect to `http://localhost:4000/playground` for playground page
-
-#### test `sayHello`, `sayBye` queries
 
 #### add entities those you need into `src/entities/*`
 
