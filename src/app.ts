@@ -1,9 +1,9 @@
 import cors from "cors";
+import { NextFunction, Response } from "express";
 import { GraphQLServer } from "graphql-yoga";
 import helmet from "helmet";
 import logger from "morgan";
 import schema from "./schema";
-import { Response, NextFunction } from "express";
 import decodeJWT from "./utils/decodeJWT";
 
 class App {
@@ -30,7 +30,11 @@ class App {
     this.app.express.use(this.jwt);
   };
 
-  private jwt = async (req, res: Response, next: NextFunction): Promise<void> => {
+  private jwt = async (
+    req,
+    res: Response,
+    next: NextFunction
+  ): Promise<void> => {
     const token = req.get("X-JWT");
 
     if (token) {
