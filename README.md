@@ -1,8 +1,8 @@
 # graphql-yoga-with-typeorm-boilerplate v1.1
 
-## description
+## Description
 
-- boiler plate project for
+- Boiler plate project for
   - graphql-yoga(express)
   - typescript
   - typeorm
@@ -41,7 +41,7 @@ JWT_SECRET=(your JWT secret for authentication)
 
 #### VSCode GraphQL Support
 
-Install the [GraphQL VSCode Extension](https://marketplace.visualstudio.com/items?itemName=Prisma.vscode-graphql) for best experience
+Install the [GraphQL VSCode Extension](https://marketplace.visualstudio.com/items?itemName=Prisma.vscode-graphql) for best experience.
 
 #### Run `yarn` to install dependencies
 
