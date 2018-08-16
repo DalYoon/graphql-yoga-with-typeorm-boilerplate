@@ -1,21 +1,22 @@
+import bcrypt from "bcrypt";
+import { IsEmail } from "class-validator";
 import {
-  Column,
   BaseEntity,
+  BeforeInsert,
+  BeforeUpdate,
+  Column,
+  CreateDateColumn,
   Entity,
   PrimaryGeneratedColumn,
-  CreateDateColumn,
-  UpdateDateColumn,
-  BeforeInsert,
-  BeforeUpdate
+  UpdateDateColumn
 } from "typeorm";
-import { IsEmail } from "class-validator";
-import bcrypt from "bcrypt";
 
 const BCRYPT_ROUNDS = 10;
 
 @Entity()
 class User extends BaseEntity {
-  @PrimaryGeneratedColumn() id: number;
+  @PrimaryGeneratedColumn()
+  id: number;
 
   @Column({ type: "text", nullable: false })
   @IsEmail()
@@ -30,16 +31,14 @@ class User extends BaseEntity {
   @Column({ type: "text", nullable: false })
   lastName: string;
 
-  @CreateDateColumn() createdAt: string;
+  @CreateDateColumn()
+  createdAt: string;
 
-  @UpdateDateColumn() updatedAt: string;
+  @UpdateDateColumn()
+  updatedAt: string;
 
   get fullName(): string {
     return `${this.firstName} ${this.lastName}`;
-  }
-
-  private hashPassword(password: string): Promise<string> {
-    return bcrypt.hash(password, BCRYPT_ROUNDS);
   }
 
   public comparePassword(password: string): Promise<boolean> {
@@ -53,6 +52,9 @@ class User extends BaseEntity {
       const hashedPassword = await this.hashPassword(this.password);
       this.password = hashedPassword;
     }
+  }
+  private hashPassword(password: string): Promise<string> {
+    return bcrypt.hash(password, BCRYPT_ROUNDS);
   }
 }
 

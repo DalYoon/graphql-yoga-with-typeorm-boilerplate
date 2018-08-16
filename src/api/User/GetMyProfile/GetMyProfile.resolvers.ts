@@ -1,6 +1,6 @@
-import { Resolvers } from "../../../types/resolvers";
-import { GetMyProfileResponse } from "../../../types/graph";
 import User from "../../../entities/User";
+import { GetMyProfileResponse } from "../../../types/graph";
+import { Resolvers } from "../../../types/resolvers";
 import privateResolver from "../../../utils/privateResolver";
 
 const resolvers: Resolvers = {

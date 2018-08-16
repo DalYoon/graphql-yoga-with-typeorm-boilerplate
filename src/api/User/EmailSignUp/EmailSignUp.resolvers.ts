@@ -1,10 +1,16 @@
-import { Resolvers } from "../../../types/resolvers";
-import { EmailSignUpResponse, EmailSignUpMutationArgs } from "../../../types/graph";
 import User from "../../../entities/User";
+import {
+  EmailSignUpMutationArgs,
+  EmailSignUpResponse
+} from "../../../types/graph";
+import { Resolvers } from "../../../types/resolvers";
 
 const resolvers: Resolvers = {
   Mutation: {
-    EmailSignUp: async (_, args: EmailSignUpMutationArgs): Promise<EmailSignUpResponse> => {
+    EmailSignUp: async (
+      _,
+      args: EmailSignUpMutationArgs
+    ): Promise<EmailSignUpResponse> => {
       try {
         const { email } = args;
         const existingUser = await User.findOne({ email });
