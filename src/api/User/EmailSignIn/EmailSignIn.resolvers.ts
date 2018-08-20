@@ -1,11 +1,17 @@
-import { EmailSignInMutationArgs, EmailSignInResponse } from "./../../../types/graph.d";
-import { Resolvers } from "../../../types/resolvers";
 import User from "../../../entities/User";
+import { Resolvers } from "../../../types/resolvers";
 import createJWT from "../../../utils/createJWT";
+import {
+  EmailSignInMutationArgs,
+  EmailSignInResponse
+} from "./../../../types/graph.d";
 
 const resolvers: Resolvers = {
   Mutation: {
-    EmailSignIn: async (_, args: EmailSignInMutationArgs): Promise<EmailSignInResponse> => {
+    EmailSignIn: async (
+      _,
+      args: EmailSignInMutationArgs
+    ): Promise<EmailSignInResponse> => {
       const { email, password } = args;
 
       try {

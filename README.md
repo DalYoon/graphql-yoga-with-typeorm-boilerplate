@@ -1,14 +1,14 @@
 # graphql-yoga-with-typeorm-boilerplate v1.1
 
-## description
+## Description
 
-- boiler plate project for
+- Boiler plate project for
   - graphql-yoga(express)
   - typescript
   - typeorm
   - postgres
 
-## features
+## Features
 
 - [x] Express Server (port 4000)
 - [x] Graphql Entry Point (/graphql)
@@ -21,7 +21,7 @@
 
 ## Usage
 
-#### create project
+#### Create project
 
 ```console
 mkdir graphql-project
@@ -29,7 +29,7 @@ cd graphql-project
 git clone https://github.com/DalYoon/graphql-yoga-with-typeorm-boilerplate .
 ```
 
-#### change `.env` for your database and JWT Secret
+#### Change `.env` for your database and JWT Secret
 
 ```
 DB_ENDPOINT=(your database address)
@@ -39,27 +39,24 @@ DB_PASSWORD=(your database password)
 JWT_SECRET=(your JWT secret for authentication)
 ```
 
-#### add `.env` into `.gitignore` file for secret
+#### VSCode GraphQL Support
 
-```
-node_modules
-.env
-```
+Install the [GraphQL VSCode Extension](https://marketplace.visualstudio.com/items?itemName=Prisma.vscode-graphql) for best experience.
 
-#### `yarn` to install dependencies
+#### Run `yarn` to install dependencies
 
 ```console
 yarn
 ```
 
-#### `yarn dev` to start the server
+#### Run `yarn dev` to start the server
 
 ```console
 yarn dev
 ```
 
-#### connect to `http://localhost:4000/playground` for playground page
+#### Connect to `http://localhost:4000/playground` for playground page
 
-#### add entities those you need into `src/entities/*`
+#### Add entities those you need into `src/entities/*`
 
-#### enjoy!
+#### Enjoy!
