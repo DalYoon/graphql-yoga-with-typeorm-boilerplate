@@ -43,5 +43,9 @@
     "tslint-config-prettier": "^1.14.0",
     "typeorm": "^0.2.7",
     "typescript": "^2.9.2"
+  },
+  "now": {
+    "name": "app-name",
+    "dotenv": ".env.production"
   }
 }
