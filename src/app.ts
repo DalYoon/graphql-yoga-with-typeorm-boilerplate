@@ -1,3 +1,4 @@
+import cookieParser from "cookie-parser";
 import cors from "cors";
 import { NextFunction, Response } from "express";
 import { GraphQLServer } from "graphql-yoga";
@@ -27,6 +28,7 @@ class App {
     this.app.express.use(cors());
     this.app.express.use(logger("dev"));
     this.app.express.use(helmet());
+    this.app.express.use(cookieParser());
     this.app.express.use(this.jwt);
   };
 
@@ -35,8 +37,7 @@ class App {
     res: Response,
     next: NextFunction
   ): Promise<void> => {
-    const token = req.get("X-JWT");
-
+    const token = req.cookies["X-JWT"] || req.get("X-JWT");
     if (token) {
       const user = await decodeJWT(token);
       if (user) {

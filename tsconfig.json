@@ -2,6 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "module": "commonjs",
+    "outDir": "dist",
     "target": "es5",
     "lib": ["es6", "dom", "esnext.asynciterable"],
     "sourceMap": true,
