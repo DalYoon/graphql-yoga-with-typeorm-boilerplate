@@ -5,7 +5,6 @@
   "license": "MIT",
   "devDependencies": {
     "@types/bcrypt": "^2.0.0",
-    "@types/cors": "^2.8.4",
     "@types/helmet": "^0.0.38",
     "@types/jsonwebtoken": "^7.2.8",
     "@types/morgan": "^1.7.35",
