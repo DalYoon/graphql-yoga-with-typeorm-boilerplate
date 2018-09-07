@@ -13,7 +13,11 @@ const GRAPHQL_ENDPOINT: string = "/graphql";
 const appOptions: Options = {
   port: PORT,
   playground: PLAYGROUND_ENDPOINT,
-  endpoint: GRAPHQL_ENDPOINT
+  endpoint: GRAPHQL_ENDPOINT,
+  cors: {
+    credentials: true,
+    origin: true
+  }
 };
 
 const handleAppStart = () => console.log(`Server is Listening on ${PORT}`);

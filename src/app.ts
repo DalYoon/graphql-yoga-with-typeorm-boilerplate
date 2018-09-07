@@ -1,5 +1,4 @@
 import cookieParser from "cookie-parser";
-import cors from "cors";
 import { NextFunction, Response } from "express";
 import { GraphQLServer } from "graphql-yoga";
 import helmet from "helmet";
@@ -25,7 +24,6 @@ class App {
   }
 
   private middlewares = (): void => {
-    this.app.express.use(cors());
     this.app.express.use(logger("dev"));
     this.app.express.use(helmet());
     this.app.express.use(cookieParser());
