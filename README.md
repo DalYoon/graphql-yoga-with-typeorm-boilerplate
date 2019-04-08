@@ -33,7 +33,7 @@ git clone https://github.com/DalYoon/graphql-yoga-with-typeorm-boilerplate .
 
 ```
 DB_ENDPOINT=(your database address)
-DB_NAME=DB-NAME=(your database name)
+DB_NAME=(your database name)
 DB_USERNAME=(your database username)
 DB_PASSWORD=(your database password)
 JWT_SECRET=(your JWT secret for authentication)
