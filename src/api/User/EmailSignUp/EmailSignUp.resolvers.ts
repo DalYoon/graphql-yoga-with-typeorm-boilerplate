@@ -21,7 +21,13 @@ const resolvers: Resolvers = {
             user: null
           };
         } else {
-          const user = await User.create({ ...args }).save();
+          const user = new User();
+          user.email = email;
+          await user.setPassword(password);
+          user.firstName = firstName;
+          user.lastName = lastName;
+          await user.save();
+
           if (user) {
             return {
               ok: true,
